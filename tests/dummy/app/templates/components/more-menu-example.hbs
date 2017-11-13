@@ -1,0 +1,73 @@
+<h1 class="mb-4">Ember more menu - Demo</h1>
+
+<style>
+  .more-menu {
+
+    border: 1px solid #ccc;
+    min-width: 150px;
+  }
+  .more-menu--container {
+    padding: 10px;
+    padding-right: 20px;
+  }
+  .more-menu--more-menu {
+    margin-top: 10px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  }
+  .resizeable:after {
+    line-height: 9px;
+    font-size: 8px;
+    color: #fff;
+    content: '|||';
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 20px;
+    padding: 5px 0;
+    background: #007bff;
+    border: 1px solid #ccc;
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    margin-top: -10px;
+  }
+</style>
+
+<h4>Basic</h4>
+{{more-menu items=items class="example1 resizeable"}}
+
+<hr>
+
+<h4>Custom yields</h4>
+{{#more-menu
+  items=items
+  class="example2 resizeable"
+  moreButtonText="More options"
+  moreButtonClass="btn btn-outline-primary btn-sm"
+  targetAttachmentPosition="bottom center"
+  attachmentPosition="top center"
+  as |section|
+}}
+  {{#if (eq section "menu")}}
+    <ul class="nav flex-nowrap">
+      {{#each items as |item|}}
+        <li>
+          <a href="#" class="nav-link btn-sm">{{item.text}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  {{/if}}
+
+  {{#if (eq section "more")}}
+    <ul class="nav flex-column">
+      {{#each items as |item|}}
+        <li class="nav-item">
+          <a href="#" class="nav-link">{{item.text}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  {{/if}}
+{{/more-menu}}
+
+<hr>

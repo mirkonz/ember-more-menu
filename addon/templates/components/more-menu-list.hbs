@@ -1,0 +1,17 @@
+{{#if items}}
+  {{#each items as |item|}}
+    <li>
+      {{#if item.linkTo}}
+        {{#link-to item.linkTo class=itemClass}}
+          {{item.text}}
+        {{/link-to}}
+      {{else if item.href}}
+        <a href="{{item.href}}" target="{{item.target}}" class={{itemClass}}>
+          {{item.text}}
+        </a>
+      {{else}}
+        <span class={{itemClass}}>{{item.text}}</span>
+      {{/if}}
+    </li>
+  {{/each}}
+{{/if}}
