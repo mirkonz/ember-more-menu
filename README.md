@@ -1,5 +1,7 @@
 # Ember-more-menu
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mayko780/ember-more-menu.svg)](https://greenkeeper.io/)
+
 This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
