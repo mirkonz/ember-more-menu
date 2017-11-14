@@ -1,0 +1,41 @@
+<div class="more-menu--container">
+  {{#if (eq moreButtonPosition "right")}}
+    <div class="more-menu--items">
+      {{#if hasBlock}}
+        {{yield "menu"}}
+      {{else}}
+        {{more-menu-list items=items itemClass=itemClass}}
+      {{/if}}
+    </div>
+  {{/if}}
+  {{#click-outside class="more-menu--more-btn" except-selector=exceptSelector action=(action "closeMoreMenu")}}
+    <a href="#" id="{{moreButtonId}}" class={{moreButtonClass}} {{action "toggleMoreMenu"}}>
+      {{moreButtonText}}
+    </a>
+  {{/click-outside}}
+  {{#if (eq moreButtonPosition "left")}}
+    <div class="more-menu--items">
+      {{#if hasBlock}}
+        {{yield "menu"}}
+      {{else}}
+        {{more-menu-list items=items itemClass=itemClass}}
+      {{/if}}
+    </div>
+  {{/if}}
+</div>
+
+{{#if _showMoreMenu}}
+  {{#ember-tether
+    id=(concat moreButtonId "-menu")
+    target=(concat "#" moreButtonId)
+    targetAttachment=targetAttachmentPosition
+    attachment=attachmentPosition
+    class="more-menu--more-menu"
+  }}
+    {{#if hasBlock}}
+      {{yield "more"}}
+    {{else}}
+      {{more-menu-list items=items itemClass=moreMenuItemClass}}
+    {{/if}}
+  {{/ember-tether}}
+{{/if}}
