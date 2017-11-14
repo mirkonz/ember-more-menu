@@ -2,11 +2,11 @@ import Ember from 'ember';
 import layout from '../templates/components/more-menu';
 import CssElementQueries from 'npm:css-element-queries';
 
-const { Component, inject, computed, run: { schedule } } = Ember;
+const { $, Component, inject, computed, run: { schedule } } = Ember;
 const ResizeSensor = CssElementQueries.ResizeSensor;
 
 export default Component.extend({
-  resize: Ember.inject.service(),
+  resize: inject.service(),
   classNames: ['more-menu'],
   layout,
 
@@ -40,7 +40,7 @@ export default Component.extend({
   didInsertElement() {
 
     // Set up window resize handler
-    this.get('resize').on('didResize', event => {
+    this.get('resize').on('didResize', () => {
       this.calculateItems();
     });
 
@@ -79,7 +79,6 @@ export default Component.extend({
     $(moreItemElements).hide();
 
     const containerWidth = containerElement.width();
-    const itemsContainerWidth = itemsContainerElement.width();
     const moreContainerWidth = moreButtonElement.width();
 
     if (containerWidth < itemsContainerElement.width()) {
