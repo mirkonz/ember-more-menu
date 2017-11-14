@@ -49,7 +49,7 @@ export default Component.extend({
       this.calculateItems();
     });
 
-    // Set up event listener to
+    // Set up event listener
     this.$().on('hideMoreMenu', () => {
       this.set('_showMoreMenu', false);
     });
