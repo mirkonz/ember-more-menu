@@ -44,7 +44,11 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+<<<<<<< HEAD
     // here you can enable a production-specific feature
+=======
+
+>>>>>>> 25d279ad710230fbe92de1207ff1184b3033dcb5
   }
 
   return ENV;
