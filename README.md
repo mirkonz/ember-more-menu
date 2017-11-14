@@ -13,6 +13,8 @@
 
 A horizontal responsive menu component which hides items that don't fit in a dropdown more menu.
 
+![ember-more-menu in action](https://raw.githubusercontent.com/mayko780/ember-more-menu/master/ember-more-menu-demo.gif)
+
 ## Installation
 
 In your application's directory
@@ -22,6 +24,7 @@ In your application's directory
 * `ember install ember-tether`
 * `ember install ember-truth-helpers`
 * `ember install ember-composable-helpers`
+* `ember install ember-click-outside`
 * `npm install --save-dev ember-browserify`
 * `npm install --save-dev css-element-queries`
 
