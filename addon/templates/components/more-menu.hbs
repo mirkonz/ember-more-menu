@@ -24,18 +24,18 @@
   {{/if}}
 </div>
 
-{{#if _showMoreMenu}}
-  {{#ember-tether
-    id=(concat moreButtonId "-menu")
-    target=(concat "#" moreButtonId)
-    targetAttachment=targetAttachmentPosition
-    attachment=attachmentPosition
-    class="more-menu--more-menu"
-  }}
+{{#ember-tether
+  id=(concat moreButtonId "-menu")
+  target=(concat "#" moreButtonId)
+  targetAttachment=targetAttachmentPosition
+  attachment=attachmentPosition
+  class="more-menu--more-menu"
+}}
+  {{#if _showMoreMenu}}
     {{#if hasBlock}}
       {{yield "more"}}
     {{else}}
       {{more-menu-list items=items itemClass=moreMenuItemClass}}
     {{/if}}
-  {{/ember-tether}}
-{{/if}}
+  {{/if}}
+{{/ember-tether}}

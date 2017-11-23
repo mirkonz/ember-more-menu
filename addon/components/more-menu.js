@@ -34,7 +34,7 @@ export default Component.extend({
     if (!closeMoreMenuOnClick) {
       exceptSelector.push(`#${moreButtonId}-menu`);
     }
-    return exceptSelector.join(",");
+    return exceptSelector.join(',');
   }),
 
   didInsertElement() {
@@ -78,10 +78,10 @@ export default Component.extend({
     $(itemElements).show();
     $(moreItemElements).hide();
 
-    const containerWidth = containerElement.width();
-    const moreContainerWidth = moreButtonElement.width();
+    const containerWidth = this.getWidth(containerElement);
+    const moreContainerWidth = this.getWidth(moreButtonElement);
 
-    if (containerWidth < itemsContainerElement.width()) {
+    if (containerWidth < this.getWidth(itemsContainerElement)) {
 
       if (this.get('moreButtonPosition') === 'right') {
         itemElements = itemElements.get().reverse();
@@ -91,7 +91,7 @@ export default Component.extend({
       $(itemElements).each((i, itemElement) => {
         $(itemElement).hide();
         $(moreItemElements[i]).show();
-        if (containerWidth - moreContainerWidth >= itemsContainerElement.width()) {
+        if (containerWidth - moreContainerWidth >= this.getWidth(itemsContainerElement)) {
           return false;
         }
       });
@@ -103,6 +103,11 @@ export default Component.extend({
     } else {
       moreButtonElement.hide();
     }
+  },
+
+  getWidth(element) {
+    return $(element).width();
+    // return $(element).get(0).getBoundingClientRect().width;
   },
 
   actions: {
