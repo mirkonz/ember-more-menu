@@ -2,11 +2,11 @@ import Ember from 'ember';
 import layout from '../templates/components/more-menu';
 import CssElementQueries from 'npm:css-element-queries';
 
-const { Component, inject, computed, run: { schedule } } = Ember;
+const { $, Component, inject, computed, run: { schedule } } = Ember;
 const ResizeSensor = CssElementQueries.ResizeSensor;
 
 export default Component.extend({
-  resize: Ember.inject.service(),
+  resize: inject.service(),
   classNames: ['more-menu'],
   layout,
 
@@ -34,13 +34,13 @@ export default Component.extend({
     if (!closeMoreMenuOnClick) {
       exceptSelector.push(`#${moreButtonId}-menu`);
     }
-    return exceptSelector.join(",");
+    return exceptSelector.join(',');
   }),
 
   didInsertElement() {
 
     // Set up window resize handler
-    this.get('resize').on('didResize', event => {
+    this.get('resize').on('didResize', () => {
       this.calculateItems();
     });
 
@@ -49,7 +49,7 @@ export default Component.extend({
       this.calculateItems();
     });
 
-    // Set up event listener to
+    // Set up event listener
     this.$().on('hideMoreMenu', () => {
       this.set('_showMoreMenu', false);
     });
@@ -78,11 +78,10 @@ export default Component.extend({
     $(itemElements).show();
     $(moreItemElements).hide();
 
-    const containerWidth = containerElement.width();
-    const itemsContainerWidth = itemsContainerElement.width();
-    const moreContainerWidth = moreButtonElement.width();
+    const containerWidth = this.getWidth(containerElement);
+    const moreContainerWidth = this.getWidth(moreButtonElement);
 
-    if (containerWidth < itemsContainerElement.width()) {
+    if (containerWidth < this.getWidth(itemsContainerElement)) {
 
       if (this.get('moreButtonPosition') === 'right') {
         itemElements = itemElements.get().reverse();
@@ -92,7 +91,7 @@ export default Component.extend({
       $(itemElements).each((i, itemElement) => {
         $(itemElement).hide();
         $(moreItemElements[i]).show();
-        if (containerWidth - moreContainerWidth >= itemsContainerElement.width()) {
+        if (containerWidth - moreContainerWidth >= this.getWidth(itemsContainerElement)) {
           return false;
         }
       });
@@ -104,6 +103,11 @@ export default Component.extend({
     } else {
       moreButtonElement.hide();
     }
+  },
+
+  getWidth(element) {
+    return $(element).width();
+    // return $(element).get(0).getBoundingClientRect().width;
   },
 
   actions: {
