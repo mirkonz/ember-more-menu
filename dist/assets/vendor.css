@@ -1,0 +1,23 @@
+.more-menu--container {
+  display: flex;
+  align-items: center; }
+  .more-menu--container .more-menu--items {
+    white-space: nowrap; }
+    .more-menu--container .more-menu--items .more-menu--list {
+      flex-direction: row; }
+  .more-menu--container .more-menu--more-btn {
+    flex-grow: 1;
+    text-align: right; }
+
+.more-menu--list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .more-menu--list li {
+    display: inline;
+    margin: 0;
+    padding: 0; }
+
+/*# sourceMappingURL=ember-more-menu.css.map */

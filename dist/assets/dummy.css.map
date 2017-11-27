@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "dummy.css",
+	"sourceRoot": "/Users/mirko/CloudStation/work/_git/github/ember-more-menu/app/styles",
+	"sources": [
+		"../../sass_compiler-input_base_path-DlmCkD70.tmp/app/styles/app.scss"
+	],
+	"sourcesContent": [
+		".more-menu {\n  border: 1px solid #ccc;\n  min-width: 150px;\n}\n.more-menu--container {\n  padding: 10px;\n  padding-right: 20px;\n}\n.more-menu--more-menu {\n  margin-top: 10px;\n  background: #fff;\n  box-shadow: 0 5px 10px rgba(0,0,0,.2);\n}\n.resizeable:after {\n  line-height: 9px;\n  font-size: 8px;\n  color: #fff;\n  content: '|||';\n  display: flex;\n  align-content: center;\n  justify-content: center;\n  width: 20px;\n  padding: 5px 0;\n  background: #007bff;\n  border: 1px solid #ccc;\n  position: absolute;\n  right: -10px;\n  top: 50%;\n  margin-top: -10px;\n}\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,UAAU,CAAC;EACT,MAAM,EAAE,cAAc;EACtB,SAAS,EAAE,KAAK,GACjB;;AACD,AAAA,qBAAqB,CAAC;EACpB,OAAO,EAAE,IAAI;EACb,aAAa,EAAE,IAAI,GACpB;;AACD,AAAA,qBAAqB,CAAC;EACpB,UAAU,EAAE,IAAI;EAChB,UAAU,EAAE,IAAI;EAChB,UAAU,EAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,kBAAc,GACtC;;AACD,AAAA,WAAW,AAAA,MAAM,CAAC;EAChB,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,GAAG;EACd,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,KAAK;EACd,OAAO,EAAE,IAAI;EACb,aAAa,EAAE,MAAM;EACrB,eAAe,EAAE,MAAM;EACvB,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,KAAK;EACd,UAAU,EAAE,OAAO;EACnB,MAAM,EAAE,cAAc;EACtB,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,KAAK;EACZ,GAAG,EAAE,GAAG;EACR,UAAU,EAAE,KAAK,GAClB"
+}
