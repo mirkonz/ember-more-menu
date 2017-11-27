@@ -1,19 +1,17 @@
 # Ember-more-menu
-<!-- [![Build Status](https://travis-ci.org/mayko780/ember-more-menu.svg?branch=master)](https://travis-ci.org/mayko780/ember-more-menu) -->
-<!-- [![npm Version][npm-badge]][npm]
-[![Build Status][travis-badge]][travis] -->
-
+[![Build Status](https://travis-ci.org/mayko780/ember-more-menu.svg?branch=master)](https://travis-ci.org/mayko780/ember-more-menu)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-more-menu.svg)](http://emberobserver.com/addons/ember-more-menu)
 [![npm version](https://badge.fury.io/js/ember-more-menu.svg)](https://badge.fury.io/js/ember-more-menu)
 [![Dependency Status](https://david-dm.org/mayko780/ember-more-menu.svg)](https://david-dm.org/mayko780/ember-more-menu)
 [![devDependency Status](https://david-dm.org/mayko780/ember-more-menu/dev-status.svg)](https://david-dm.org/mayko780/ember-more-menu#info=devDependencies)
 [![Greenkeeper badge](https://badges.greenkeeper.io/mayko780/ember-more-menu.svg)](https://greenkeeper.io/)
-<!-- [![Greenkeeper badge](https://badges.greenkeeper.io/mayko780/ember-more-menu.svg)](https://greenkeeper.io/) -->
 
 
 A horizontal responsive menu component which hides items that don't fit in a dropdown more menu.
 
-![ember-more-menu in action](https://raw.githubusercontent.com/mayko780/ember-more-menu/master/ember-more-menu-demo.gif)
+### [Demo](https://mayko780.github.io/ember-more-menu/)
+
+[![ember-more-menu in action](https://raw.githubusercontent.com/mayko780/ember-more-menu/master/ember-more-menu-demo.gif)](https://mayko780.github.io/ember-more-menu/)
 
 ## Installation
 
