@@ -5,7 +5,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'dummy',
     environment,
-    rootURL: '/',
+    rootURL: '/ember-more-menu',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {

@@ -1,2 +1,2 @@
-import 'npm:css-element-queries';
+import 'resize-sensor';
 export { default } from 'ember-more-menu/components/more-menu';

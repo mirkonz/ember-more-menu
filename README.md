@@ -95,7 +95,6 @@ const items = [{
 * Clone this repo: `git clone https://github.com/mayko780/ember-more-menu.git`
 * `cd ember-more-menu`
 * `npm install`
-* `bower install`
 * `ember serve`
 * Visit [http://localhost:4200](http://localhost:4200).
 

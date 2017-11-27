@@ -11,7 +11,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{more-menu}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().trim(), 'More');
 
   // Template block usage:
   this.render(hbs`
@@ -20,5 +20,8 @@ test('it renders', function(assert) {
     {{/more-menu}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  let text = this.$().text().trim();
+  text = text.replace(/(\r\n|\n|\r)/gm, '');
+  text = text.replace(/\s{2,}/g,' ');
+  assert.equal(text, 'template block text More');
 });

@@ -1,9 +1,8 @@
 import Ember from 'ember';
 import layout from '../templates/components/more-menu';
-import CssElementQueries from 'npm:css-element-queries';
+import ResizeSensor from 'resize-sensor';
 
 const { $, Component, inject, computed, run: { schedule } } = Ember;
-const ResizeSensor = CssElementQueries.ResizeSensor;
 
 export default Component.extend({
   resize: inject.service(),
@@ -50,18 +49,19 @@ export default Component.extend({
     });
 
     // Set up event listener
-    this.$().on('hideMoreMenu', () => {
-      this.set('_showMoreMenu', false);
-    });
     this.$().on('showMoreMenu', () => {
       this.set('_showMoreMenu', true);
+    });
+    this.$().on('hideMoreMenu', () => {
+      this.set('_showMoreMenu', false);
     });
 
     // Initial set up
     schedule('afterRender', this, this.calculateItems);
   },
 
-  didDestroyElement() {
+  willClearRender() {
+    this.$().off('showMoreMenu');
     this.$().off('hideMoreMenu');
   },
 
@@ -72,8 +72,8 @@ export default Component.extend({
     const moreButtonId = this.get('moreButtonId');
     const moreContainerElement = $(`#${moreButtonId}-menu`);
 
-    let itemElements = itemsContainerElement.find('li');
-    let moreItemElements = moreContainerElement.find('li');
+    let itemElements = $(itemsContainerElement).find('li');
+    let moreItemElements = $(moreContainerElement).find('li');
 
     $(itemElements).show();
     $(moreItemElements).hide();
@@ -99,9 +99,9 @@ export default Component.extend({
 
     const hasHiddenItems = $(itemElements).filter(':hidden').length;
     if (hasHiddenItems) {
-      moreButtonElement.show();
+      $(moreButtonElement).show();
     } else {
-      moreButtonElement.hide();
+      $(moreButtonElement).hide();
     }
   },
 
