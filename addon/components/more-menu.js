@@ -1,11 +1,11 @@
 import Ember from 'ember';
 import layout from '../templates/components/more-menu';
-import ResizeSensor from 'resize-sensor';
+import ResizeElementMixin from 'ember-element-resize/mixins/resize';
 
 const { $, Component, inject, computed, run: { schedule } } = Ember;
 
-export default Component.extend({
-  resize: inject.service(),
+export default Component.extend(ResizeElementMixin, {
+  windowResize: inject.service(),
   classNames: ['more-menu'],
   layout,
 
@@ -37,14 +37,10 @@ export default Component.extend({
   }),
 
   didInsertElement() {
+    this._super(...arguments);
 
     // Set up window resize handler
-    this.get('resize').on('didResize', () => {
-      this.calculateItems();
-    });
-
-    // Set up component resize handler
-    new ResizeSensor(this.$(), () => {
+    this.get('windowResize').on('didResize', () => {
       this.calculateItems();
     });
 
@@ -63,6 +59,10 @@ export default Component.extend({
   willClearRender() {
     this.$().off('showMoreMenu');
     this.$().off('hideMoreMenu');
+  },
+
+  elementResizeHandler() {
+    this.calculateItems();
   },
 
   calculateItems() {

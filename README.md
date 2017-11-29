@@ -1,11 +1,12 @@
-# Ember-more-menu
-[![Build Status](https://travis-ci.org/mayko780/ember-more-menu.svg?branch=master)](https://travis-ci.org/mayko780/ember-more-menu)
-[![Ember Observer Score](http://emberobserver.com/badges/ember-more-menu.svg)](http://emberobserver.com/addons/ember-more-menu)
-[![npm version](https://badge.fury.io/js/ember-more-menu.svg)](https://badge.fury.io/js/ember-more-menu)
-[![Dependency Status](https://david-dm.org/mayko780/ember-more-menu.svg)](https://david-dm.org/mayko780/ember-more-menu)
-[![devDependency Status](https://david-dm.org/mayko780/ember-more-menu/dev-status.svg)](https://david-dm.org/mayko780/ember-more-menu#info=devDependencies)
-[![Greenkeeper badge](https://badges.greenkeeper.io/mayko780/ember-more-menu.svg)](https://greenkeeper.io/)
-
+<h1 align="center">Ember-more-menu</h1>
+<p align="center">
+  [![Build Status](https://travis-ci.org/mayko780/ember-more-menu.svg?branch=master)](https://travis-ci.org/mayko780/ember-more-menu)
+  [![Ember Observer Score](http://emberobserver.com/badges/ember-more-menu.svg)](http://emberobserver.com/addons/ember-more-menu)
+  [![npm version](https://badge.fury.io/js/ember-more-menu.svg)](https://badge.fury.io/js/ember-more-menu)
+  [![Dependency Status](https://david-dm.org/mayko780/ember-more-menu.svg)](https://david-dm.org/mayko780/ember-more-menu)
+  [![devDependency Status](https://david-dm.org/mayko780/ember-more-menu/dev-status.svg)](https://david-dm.org/mayko780/ember-more-menu#info=devDependencies)
+  [![Greenkeeper badge](https://badges.greenkeeper.io/mayko780/ember-more-menu.svg)](https://greenkeeper.io/)
+</p>
 
 A horizontal responsive menu component which hides items that don't fit in a dropdown more menu.
 
@@ -18,15 +19,7 @@ A horizontal responsive menu component which hides items that don't fit in a dro
 In your application's directory
 
 * `ember install ember-more-menu`
-* `ember install ember-resize`
-* `ember install ember-tether`
-* `ember install ember-truth-helpers`
-* `ember install ember-composable-helpers`
-* `ember install ember-click-outside`
-* `npm install --save-dev ember-browserify`
-* `npm install --save-dev css-element-queries`
 
-*(This is work in progress: Eventually it will be just `ember install ember-more-menu`)*
 ## Examples
 
 ```javascript
