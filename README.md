@@ -1,11 +1,14 @@
 <h1 align="center">Ember-more-menu</h1>
 
+[![npm version](https://badge.fury.io/js/ember-more-menu.svg)](https://badge.fury.io/js/ember-more-menu)
+[![npm](https://img.shields.io/npm/dm/ember-more-menu.svg)]()
 [![Build Status](https://travis-ci.org/mayko780/ember-more-menu.svg?branch=master)](https://travis-ci.org/mayko780/ember-more-menu)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-more-menu.svg)](http://emberobserver.com/addons/ember-more-menu)
-[![npm version](https://badge.fury.io/js/ember-more-menu.svg)](https://badge.fury.io/js/ember-more-menu)
+[![Ember Version](https://embadge.io/v1/badge.svg?start=2.17.0)](https://embadge.io/v1/badge.svg?start=2.17.0)
 [![Dependency Status](https://david-dm.org/mayko780/ember-more-menu.svg)](https://david-dm.org/mayko780/ember-more-menu)
 [![devDependency Status](https://david-dm.org/mayko780/ember-more-menu/dev-status.svg)](https://david-dm.org/mayko780/ember-more-menu#info=devDependencies)
 [![Greenkeeper badge](https://badges.greenkeeper.io/mayko780/ember-more-menu.svg)](https://greenkeeper.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 A horizontal responsive menu component which hides items that don't fit in a dropdown more menu.
 
