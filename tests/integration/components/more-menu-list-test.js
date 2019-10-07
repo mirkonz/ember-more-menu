@@ -1,16 +1,17 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('more-menu-list', 'Integration | Component | more menu list', {
-  integration: true
-});
+module('Integration | Component | more menu list', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  test('it renders', async function(assert) {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.set('myAction', function(val) { ... });
 
-  this.render(hbs`{{more-menu-list}}`);
+    await render(hbs`{{more-menu-list}}`);
 
-  assert.equal(this.$().text().trim(), '');
-
+    assert.equal(this.element.textContent.trim(), '');
+  });
 });

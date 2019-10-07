@@ -1,8 +1,14 @@
 import Ember from 'ember';
 import layout from '../templates/components/more-menu';
 import ResizeElementMixin from 'ember-element-resize/mixins/resize';
+import $ from 'jquery';
 
-const { $, Component, inject, computed, run: { schedule } } = Ember;
+const {
+  Component,
+  inject,
+  computed,
+  run: { schedule }
+} = Ember;
 
 export default Component.extend(ResizeElementMixin, {
   windowResize: inject.service(),
@@ -45,20 +51,24 @@ export default Component.extend(ResizeElementMixin, {
     });
 
     // Set up event listener
-    this.$().on('showMoreMenu', () => {
-      this.set('_showMoreMenu', true);
-    });
-    this.$().on('hideMoreMenu', () => {
-      this.set('_showMoreMenu', false);
-    });
+    this.element.addEventListener('showMoreMenu', this._showMenu);
+    this.element.addEventListener('hideMoreMenu', this._hideMenu);
 
     // Initial set up
     schedule('afterRender', this, this.calculateItems);
   },
 
+  _showMenu() {
+    this.set('_showMoreMenu', true);
+  },
+
+  _hideMenu() {
+    this.set('_showMoreMenu', false);
+  },
+
   willClearRender() {
-    this.$().off('showMoreMenu');
-    this.$().off('hideMoreMenu');
+    this.element.removeEventListener('showMoreMenu', this._showMenu);
+    this.element.removeEventListener('hideMoreMenu', this._hideMenu);
   },
 
   elementResizeHandler() {
@@ -82,7 +92,6 @@ export default Component.extend(ResizeElementMixin, {
     const moreContainerWidth = this.getWidth(moreButtonElement);
 
     if (containerWidth < this.getWidth(itemsContainerElement)) {
-
       if (this.get('moreButtonPosition') === 'right') {
         itemElements = itemElements.get().reverse();
         moreItemElements = moreItemElements.get().reverse();
@@ -127,5 +136,4 @@ export default Component.extend(ResizeElementMixin, {
       schedule('afterRender', this, this.calculateItems);
     }
   }
-
 });
