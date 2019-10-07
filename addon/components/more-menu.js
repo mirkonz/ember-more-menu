@@ -1,17 +1,14 @@
-import Ember from 'ember';
+/* eslint-disable ember/jquery-ember-run */
+import Component from '@ember/component';
+import { inject as service } from '@ember/service';
+import { computed } from '@ember/object';
+import { schedule } from '@ember/runloop';
 import layout from '../templates/components/more-menu';
 import ResizeElementMixin from 'ember-element-resize/mixins/resize';
 import $ from 'jquery';
 
-const {
-  Component,
-  inject,
-  computed,
-  run: { schedule }
-} = Ember;
-
 export default Component.extend(ResizeElementMixin, {
-  windowResize: inject.service(),
+  windowResize: service(),
   classNames: ['more-menu'],
   layout,
 

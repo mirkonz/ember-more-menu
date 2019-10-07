@@ -1,10 +1,7 @@
-import Ember from 'ember';
+/* eslint-disable ember/avoid-leaking-state-in-ember-objects */
+import Component from '@ember/component';
+import { schedule } from '@ember/runloop';
 import $ from 'jquery';
-
-const {
-  Component,
-  run: { schedule }
-} = Ember;
 
 export default Component.extend({
   items: [

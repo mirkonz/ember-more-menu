@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import layout from '../templates/components/more-menu-list';
 
-export default Ember.Component.extend({
+export default Component.extend({
   classNames: ['more-menu--list'],
   tagName: 'ul',
   layout,
