@@ -31,7 +31,7 @@
     "ember-element-resize": "1.0.2",
     "ember-tether": "^1.0.0",
     "ember-truth-helpers": "^2.1.0",
-    "ember-window-resize": "1.2.1"
+    "ember-window-resize": "1.2.2"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^3.0.0",
