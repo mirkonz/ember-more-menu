@@ -9,7 +9,7 @@
     </div>
   {{/if}}
   {{#click-outside class="more-menu--more-btn" except-selector=exceptSelector action=(action "closeMoreMenu")}}
-    <a href="#" id="{{moreButtonId}}" class={{moreButtonClass}} {{action "toggleMoreMenu"}}>
+    <a href="#" id={{moreButtonId}} class={{moreButtonClass}} {{action "toggleMoreMenu"}}>
       {{moreButtonText}}
     </a>
   {{/click-outside}}

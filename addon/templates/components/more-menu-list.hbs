@@ -6,7 +6,7 @@
           {{item.text}}
         {{/link-to}}
       {{else if item.href}}
-        <a href="{{item.href}}" target="{{item.target}}" class={{itemClass}}>
+        <a href={{item.href}} target={{item.target}} class={{itemClass}}>
           {{item.text}}
         </a>
       {{else}}
