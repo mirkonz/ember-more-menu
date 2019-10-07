@@ -54,6 +54,7 @@ matrix:
 
 before_install:
   - npm config set spin false
+  - npm install
 
 script:
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO
