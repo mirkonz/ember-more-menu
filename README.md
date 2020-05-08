@@ -6,7 +6,7 @@
 [![Ember Observer Score](http://emberobserver.com/badges/ember-more-menu.svg)](http://emberobserver.com/addons/ember-more-menu)
 [![Dependency Status](https://david-dm.org/mayko780/ember-more-menu.svg)](https://david-dm.org/mayko780/ember-more-menu)
 [![devDependency Status](https://david-dm.org/mayko780/ember-more-menu/dev-status.svg)](https://david-dm.org/mayko780/ember-more-menu#info=devDependencies)
-[![Greenkeeper badge](https://badges.greenkeeper.io/mayko780/ember-more-menu.svg)](https://greenkeeper.io/)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 A horizontal responsive menu component which hides items that don't fit in a dropdown more menu.
