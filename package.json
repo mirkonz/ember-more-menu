@@ -34,7 +34,7 @@
     "ember-element-resize": "2.0.1",
     "ember-tether": "^1.0.0",
     "ember-truth-helpers": "^2.1.0",
-    "ember-window-resize": "1.2.1"
+    "ember-window-resize": "1.2.5"
   },
   "devDependencies": {
     "@ember/optional-features": "^1.0.0",
