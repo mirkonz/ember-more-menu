@@ -1,0 +1,26 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.21.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - ember-cli-babel > broccoli-babel-transpiler > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2021-09-01T00:08:42.287Z'
+    - ember-cli-babel > broccoli-babel-transpiler > workerpool > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2021-09-01T00:08:42.287Z'
+    - ember-click-outside > ember-cli-babel > broccoli-babel-transpiler > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2021-09-01T00:08:42.287Z'
+    - ember-composable-helpers > ember-cli-babel > broccoli-babel-transpiler > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2021-09-01T00:08:42.287Z'
+    - ember-element-resize > ember-cli-babel > broccoli-babel-transpiler > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2021-09-01T00:08:42.287Z'
+    - ember-window-resize > ember-cli-babel > broccoli-babel-transpiler > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2021-09-01T00:08:42.287Z'
+    - ember-click-outside > ember-cli-babel > broccoli-babel-transpiler > workerpool > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2021-09-01T00:08:42.287Z'
+    - ember-composable-helpers > ember-cli-babel > broccoli-babel-transpiler > workerpool > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2021-09-01T00:08:42.287Z'
+    - ember-element-resize > ember-cli-babel > broccoli-babel-transpiler > workerpool > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2021-09-01T00:08:42.287Z'
+    - ember-window-resize > ember-cli-babel > broccoli-babel-transpiler > workerpool > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2021-09-01T00:08:42.287Z'

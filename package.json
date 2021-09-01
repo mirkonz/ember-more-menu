@@ -21,7 +21,9 @@
     "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test",
-    "test:all": "ember try:each"
+    "test:all": "ember try:each",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "broccoli-funnel": "^2.0.2",
@@ -34,7 +36,8 @@
     "ember-element-resize": "2.0.1",
     "ember-tether": "^1.0.0",
     "ember-truth-helpers": "^2.1.0",
-    "ember-window-resize": "1.2.1"
+    "ember-window-resize": "1.2.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@ember/optional-features": "^1.0.0",
@@ -76,5 +79,6 @@
   "bugs": {
     "url": "https://github.com/mayko780/ember-more-menu/issues"
   },
-  "homepage": "http://mirkomay.com/"
+  "homepage": "http://mirkomay.com/",
+  "snyk": true
 }
