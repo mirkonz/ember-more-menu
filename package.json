@@ -37,7 +37,7 @@
     "ember-tether": "^1.0.0",
     "ember-truth-helpers": "^2.1.0",
     "ember-window-resize": "1.2.1",
-    "@snyk/protect": "latest"
+    "@snyk/protect": "1.971.0"
   },
   "devDependencies": {
     "@ember/optional-features": "^1.0.0",
