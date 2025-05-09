@@ -1,4 +1,7 @@
-<h1 align="center">Ember-more-menu</h1>
+# Ember-more-menu (Archived)
+
+⚠️ This repository is no longer actively maintained. Feel free to fork or adopt it if you find it useful.
+
 
 [![npm version](https://badge.fury.io/js/ember-more-menu.svg)](https://badge.fury.io/js/ember-more-menu)
 [![npm](https://img.shields.io/npm/dm/ember-more-menu.svg)]()
